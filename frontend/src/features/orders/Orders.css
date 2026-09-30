@@ -1,0 +1,101 @@
+.orders-page {
+    width: 100%;
+}
+
+/* ================================
+   Order Details
+================================ */
+
+.details-card {
+    margin-top: 25px;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.details-header h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.details-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.details-card h3 {
+    margin: 25px 0 12px;
+    font-size: 18px;
+}
+
+/* ================================
+   Order Summary
+================================ */
+
+.order-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.order-summary > div {
+    padding: 15px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.order-summary span {
+    display: block;
+    margin-bottom: 7px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.order-summary strong {
+    font-size: 14px;
+}
+
+/* ================================
+   Order Totals
+================================ */
+
+.order-totals {
+    width: 380px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-top: 25px;
+}
+
+.order-totals > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.order-totals span {
+    color: #6b7280;
+}
+
+.order-totals strong {
+    color: #111827;
+}
+
+.order-totals .grand-total {
+    margin-top: 8px;
+    padding: 15px 0;
+    border-bottom: none;
+    border-top: 2px solid #111827;
+    font-size: 18px;
+}
+
+.order-totals .grand-total span,
+.order-totals .grand-total strong {
+    color: #111827;
+}

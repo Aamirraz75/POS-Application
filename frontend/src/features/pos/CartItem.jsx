@@ -1,0 +1,68 @@
+function CartItem({
+    item,
+    onIncrease,
+    onDecrease,
+    onRemove
+}) {
+    const lineTotal =
+        item.unitPrice * item.quantity;
+
+    return (
+        <div className="cart-item">
+
+            <div className="cart-item-info">
+
+                <h3>{item.name}</h3>
+
+                <p>
+                    ₹{item.unitPrice.toFixed(2)} each
+                </p>
+
+            </div>
+
+            <div className="cart-item-actions">
+
+                <div className="quantity-controls">
+
+                    <button
+                        onClick={() =>
+                            onDecrease(item.productId)
+                        }
+                    >
+                        -
+                    </button>
+
+                    <span>
+                        {item.quantity}
+                    </span>
+
+                    <button
+                        onClick={() =>
+                            onIncrease(item.productId)
+                        }
+                    >
+                        +
+                    </button>
+
+                </div>
+
+                <button
+                    className="remove-button"
+                    onClick={() =>
+                        onRemove(item.productId)
+                    }
+                >
+                    Remove
+                </button>
+
+            </div>
+
+            <div className="cart-line-total">
+                ₹{lineTotal.toFixed(2)}
+            </div>
+
+        </div>
+    );
+}
+
+export default CartItem;
